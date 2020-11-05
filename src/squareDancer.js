@@ -1,7 +1,8 @@
 var SquareDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  // this.oldStep = this.step;
-
+  // this.$node = $('<span class="squareDancer"></span>');
+  this.$node = $('<img src="resources/cheezit.png" class="squareDancer">');
+  this.setPosition(top, left);
 };
 
 SquareDancer.prototype = Object.create(Dancer.prototype);
@@ -20,5 +21,12 @@ SquareDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.toggle();
+  // this.$node.toggle();
+  // this.$node.animate({
+  //   // animation: 'spin 4s linear infinite',
+  //   transform: 'rotate(360deg)'
+  // },
+  // {
+  //   duration: 8000
+  // });
 };

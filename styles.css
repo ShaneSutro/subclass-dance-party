@@ -1,27 +1,43 @@
-body, html{
+body, html {
   height:100%;
 }
-body{
+body {
   margin: 0px;
   background-color:#444;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+body, a:link, a:visited, a:active {
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton {
   padding:5px 12px;
   float:right;
 }
-.topbar{
+.topbar {
   height:32px;
   background-color: #555;
 }
-.title{
+.title {
   background-color: #777;
 }
-.dancer{
+.dancer {
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+
+.squareDancer {
+  height: 188px;
+  width: 276px;
+  position: absolute;
+  animation: spin 1s linear infinite;
+}
+
+.superBlinky {
+  height: 293px;
+  width: 362px;
+  position: absolute;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+
