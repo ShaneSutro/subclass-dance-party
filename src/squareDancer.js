@@ -1,7 +1,7 @@
 var SquareDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   // this.$node = $('<span class="squareDancer"></span>');
-  this.$node = $('<img src="resources/cheezit.png" class="squareDancer">');
+  this.$node = $('<img src="resources/cheezit.png" class="squareDancer goAway">');
   this.setPosition(top, left);
 };
 

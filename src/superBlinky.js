@@ -1,6 +1,6 @@
 var SuperBlinky = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps / 2);
-  this.$node = $('<img src="resources/extrasalt.png" class="superBlinky">');
+  this.$node = $('<img src="resources/extrasalt.png" class="superBlinky goAway">');
   this.setPosition(top, left);
   // this.oldStep = this.step;
 

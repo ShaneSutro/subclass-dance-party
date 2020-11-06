@@ -29,6 +29,9 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+    $('.goAway').on('mouseover', function(e) {
+      $(e.target).fadeOut();
+    });
   });
 
   $('.lineUp').on('click', function(event) {
@@ -49,9 +52,11 @@ $(document).ready(function() {
         window.dancers[2].setPosition($('body').height() * Math.random(), $('body').width() * Math.random());
       }, 3000);
     }
-
   });
 
+
+
+  // $('.mouseover').mouseover().fadeOut();
 });
 
 
