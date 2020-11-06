@@ -25,6 +25,7 @@ SquareDancer.prototype.constructor = SquareDancer;
 //   // });
 // };
 
+
 SquareDancer.prototype.lineUp = function() {
   console.log($(window).width());
   this.$node.animate({
