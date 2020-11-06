@@ -30,3 +30,10 @@ SquareDancer.prototype.step = function() {
   //   duration: 8000
   // });
 };
+
+SquareDancer.prototype.lineUp = function() {
+  console.log($(window).width());
+  this.$node.animate({
+    left: `${$(window).width() - 306}px`
+  });
+};
