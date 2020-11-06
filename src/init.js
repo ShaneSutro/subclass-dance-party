@@ -32,10 +32,26 @@ $(document).ready(function() {
   });
 
   $('.lineUp').on('click', function(event) {
-    console.log(window.dancers);
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
     }
   });
 
+  $('.handful').on('click', function(event) {
+    if (window.dancers.length < 3) {
+      alert('Gotta add more dancers first!');
+    } else {
+      window.dancers[1].setPosition(window.dancers[0].top + 30, window.dancers[0].left);
+      window.dancers[2].setPosition(window.dancers[0].top, window.dancers[0].left + 30);
+      setTimeout(function() {
+        window.dancers[0].setPosition($('body').height() * Math.random(), $('body').width() * Math.random());
+        window.dancers[1].setPosition($('body').height() * Math.random(), $('body').width() * Math.random());
+        window.dancers[2].setPosition($('body').height() * Math.random(), $('body').width() * Math.random());
+      }, 3000);
+    }
+
+  });
+
 });
+
+
