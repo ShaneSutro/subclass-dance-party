@@ -3,7 +3,11 @@ body, html {
 }
 body {
   margin: 0px;
-  background-color:#444;
+  background-image: url('resources/bar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active {
