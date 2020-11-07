@@ -30,20 +30,20 @@ body, a:link, a:visited, a:active {
   position:absolute;
 }
 
-.squareDancer {
+.cheezIt {
   height: 188px;
   width: 276px;
   position: absolute;
   animation: spin 1.2s linear infinite;
 }
 
-.superBlinky {
+.extraSalt {
   height: 293px;
   width: 362px;
   position: absolute;
 }
 
-.blinkyDancer {
+.someNuts {
   height: 86px;
   width: 288px;
   position: absolute;

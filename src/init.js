@@ -7,8 +7,8 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
+      ($('body').height() - 375) * Math.random(),
+      ($('body').width() - 300) * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
