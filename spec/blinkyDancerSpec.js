@@ -1,4 +1,4 @@
-describe('blinkyDancer', function() {
+describe('someNuts Dancer', function() {
 
   var blinkyDancer, clock;
   var timeBetweenSteps = 100;
@@ -29,6 +29,10 @@ describe('blinkyDancer', function() {
 
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
+    });
+
+    it('should have a step function that makes it line up', function() {
+      expect(blinkyDancer.lineUp).to.be.a.function;
     });
   });
 });

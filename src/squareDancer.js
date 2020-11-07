@@ -7,23 +7,23 @@ var SquareDancer = function(top, left, timeBetweenSteps) {
 SquareDancer.prototype = Object.create(Dancer.prototype);
 SquareDancer.prototype.constructor = SquareDancer;
 
-// SquareDancer.prototype.step = function() {
-//   // call the old version of step at the beginning of any call to this new version of step
-//   // makeDancer.prototype.step.call(this);
+SquareDancer.prototype.step = function() {
+  // call the old version of step at the beginning of any call to this new version of step
+  // makeDancer.prototype.step.call(this);
 
-//   Dancer.prototype.step.call(this);
-//   // toggle() is a jQuery method to show/hide the <span> tag.
-//   // See http://api.jquery.com/category/effects/ for this and
-//   // other effects you can use on a jQuery-wrapped html tag.
-//   // this.$node.toggle();
-//   // this.$node.animate({
-//   //   // animation: 'spin 4s linear infinite',
-//   //   transform: 'rotate(360deg)'
-//   // },
-//   // {
-//   //   duration: 8000
-//   // });
-// };
+  Dancer.prototype.step.call(this);
+  // toggle() is a jQuery method to show/hide the <span> tag.
+  // See http://api.jquery.com/category/effects/ for this and
+  // other effects you can use on a jQuery-wrapped html tag.
+  this.$node.toggle();
+  this.$node.animate({
+    // animation: 'spin 4s linear infinite',
+    transform: 'rotate(360deg)'
+  },
+  {
+    duration: 8000
+  });
+};
 
 SquareDancer.prototype.lineUp = function() {
   console.log($(window).width());

@@ -1,4 +1,4 @@
-describe('superBlinky', function() {
+describe('extraSalt Dancer', function() {
 
   var superBlinky, clock;
   var timeBetweenSteps = 100;
@@ -19,16 +19,21 @@ describe('superBlinky', function() {
   });
 
   describe('dance', function() {
-    it('should call step at least once per second', function() {
+    it('should call step at least three times per second', function() {
       sinon.spy(superBlinky, 'step');
       expect(superBlinky.step.callCount).to.be.equal(0);
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
 
-      expect(superBlinky.step.callCount).to.be.equal(1);
+      expect(superBlinky.step.callCount).to.be.equal(3);
 
       clock.tick(timeBetweenSteps);
-      expect(superBlinky.step.callCount).to.be.equal(2);
+      expect(superBlinky.step.callCount).to.be.equal(5);
+    });
+
+    it('should have a step function that makes it line up', function() {
+      // superBlinky.step();
+      expect(superBlinky.lineUp).to.be.a.function;
     });
   });
 });
